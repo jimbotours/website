@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trip Map | Jimbotours</title>
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+.route-toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 20px}
+.route-btn{border:1px solid #ccd5d8;background:white;border-radius:9px;padding:9px 12px;cursor:pointer;text-align:left}
+.route-btn b{display:block}.route-btn span{font-size:12px;opacity:.68}
+.route-btn.active{outline:3px solid rgba(0,0,0,.22);font-weight:700}
+.map-help{font-family:Arial,sans-serif;color:#647178}
+</style></head>
+<body>
+<header class="site-header"><div class="header-inner"><div><a class="brand" href="index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div>
+<nav><a href="index.html">Home</a><a href="trips.html">Trips</a><a href="map.html">Map</a><a href="timeline.html">Timeline</a><a href="about.html">About</a></nav></div></header>
+<main class="map-wrap">
+<div class="entry-date">17 JOURNEYS · 2007–2025</div>
+<h1 class="section-title">The Jimbotours map</h1>
+<p class="map-note">Every stop you supplied is plotted here. Choose a JT button to isolate one journey, or choose All trips to see the complete travel history. Repeated stops are retained where the route returned to the same place.</p>
+<div class="route-toolbar"><button class="route-btn active" data-route="ALL"><b>All trips</b><span>JT1–JT17</span></button><button class='route-btn' data-route='JT1'><b>JT1</b><span>2007 · 4 stops</span></button><button class='route-btn' data-route='JT2'><b>JT2</b><span>2008 · 5 stops</span></button><button class='route-btn' data-route='JT3'><b>JT3</b><span>2009 · 5 stops</span></button><button class='route-btn' data-route='JT4'><b>JT4</b><span>2010 · 9 stops</span></button><button class='route-btn' data-route='JT5'><b>JT5</b><span>2011 · 3 stops</span></button><button class='route-btn' data-route='JT6'><b>JT6</b><span>2012 · 4 stops</span></button><button class='route-btn' data-route='JT7'><b>JT7</b><span>2013 · 5 stops</span></button><button class='route-btn' data-route='JT8'><b>JT8</b><span>2014 · 2 stops</span></button><button class='route-btn' data-route='JT9'><b>JT9</b><span>2015 · 3 stops</span></button><button class='route-btn' data-route='JT10'><b>JT10</b><span>2016 · 4 stops</span></button><button class='route-btn' data-route='JT11'><b>JT11</b><span>2017 · 2 stops</span></button><button class='route-btn' data-route='JT12'><b>JT12</b><span>2018 · 4 stops</span></button><button class='route-btn' data-route='JT13'><b>JT13</b><span>2019 · 5 stops</span></button><button class='route-btn' data-route='JT14'><b>JT14</b><span>2022 · 2 stops</span></button><button class='route-btn' data-route='JT15'><b>JT15</b><span>2023 · 5 stops</span></button><button class='route-btn' data-route='JT16'><b>JT16</b><span>2024 · 4 stops</span></button><button class='route-btn' data-route='JT17'><b>JT17</b><span>2025 · 5 stops</span></button></div>
+<div id="trip-map"></div>
+<p class="map-help">Click any numbered stop for its place and supplied date. Route lines connect the stops in the order you gave them.</p>
+</main>
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+<script>
+var trips=[{id:'JT1',year:2007,stops:[{name:'London',date:'11 Jun 2007',lat:51.5074,lon:-0.1278},{name:'Munich',date:'12 Jun 2007',lat:48.1351,lon:11.582},{name:'Prague',date:'15 Jun 2007',lat:50.0755,lon:14.4378},{name:'Cracow',date:'18 Jun 2007',lat:50.0647,lon:19.945}]},
+{id:'JT2',year:2008,stops:[{name:'London',date:'1 Jun 2008',lat:51.5074,lon:-0.1278},{name:'Bratislava',date:'2 Jun 2008',lat:48.1486,lon:17.1077},{name:'Wien',date:'4 Jun 2008',lat:48.2082,lon:16.3738},{name:'Budapest',date:'9 Jun 2008',lat:47.4979,lon:19.0402},{name:'Berlin',date:'12 Jun 2008',lat:52.52,lon:13.405}]},
+{id:'JT3',year:2009,stops:[{name:'London',date:'16 Jun 2008 (as supplied)',lat:51.5074,lon:-0.1278},{name:'Helsinki',date:'31 May 2009',lat:60.1699,lon:24.9384},{name:'Tallinn',date:'1 Jun 2009',lat:59.437,lon:24.7536},{name:'Vilnius',date:'2 Jun 2009',lat:54.6872,lon:25.2797},{name:'Riga',date:'4 Jun 2009',lat:56.9496,lon:24.1052}]},
+{id:'JT4',year:2010,stops:[{name:'London',date:'7 Jun 2009 (as supplied)',lat:51.5074,lon:-0.1278},{name:'Trieste',date:'10 Jun 2010',lat:45.6495,lon:13.7768},{name:'Ljubljana',date:'10 Jun 2010',lat:46.0569,lon:14.5058},{name:'Zagreb',date:'12 Jun 2010',lat:45.815,lon:15.9819},{name:'Split',date:'13 Jun 2010',lat:43.5081,lon:16.4402},{name:'Hvar',date:'14 Jun 2010',lat:43.1729,lon:16.4411},{name:'Split',date:'15 Jun 2010',lat:43.5081,lon:16.4402},{name:'Ancona',date:'16 Jun 2010',lat:43.6158,lon:13.5189},{name:'Rome',date:'17 Jun 2010',lat:41.9028,lon:12.4964}]},
+{id:'JT5',year:2011,stops:[{name:'London',date:'20 Jun 2011',lat:51.5074,lon:-0.1278},{name:'Sofia',date:'22 Jun 2011',lat:42.6977,lon:23.3219},{name:'Varna',date:'24 Jun 2011',lat:43.2141,lon:27.9147}]},
+{id:'JT6',year:2012,stops:[{name:'London',date:'26 Jun 2012 (as supplied)',lat:51.5074,lon:-0.1278},{name:'Brussels',date:'23 May 2012',lat:50.8503,lon:4.3517},{name:'Cologne',date:'23 May 2012',lat:50.9375,lon:6.9603},{name:'Eindhoven',date:'25 May 2012',lat:51.4416,lon:5.4697}]},
+{id:'JT7',year:2013,stops:[{name:'London Borough of Redbridge',date:'26 May 2012 (as supplied)',lat:51.5886,lon:0.0824},{name:'Amsterdam',date:'12 Jun 2013',lat:52.3676,lon:4.9041},{name:'Duisburg',date:'13 Jun 2013',lat:51.4344,lon:6.7623},{name:'Düsseldorf',date:'13 Jun 2013',lat:51.2277,lon:6.7735},{name:'Heidelberg',date:'14 Jun 2013',lat:49.3988,lon:8.6724}]},
+{id:'JT8',year:2014,stops:[{name:'London Borough of Redbridge',date:'17 Jun 2014',lat:51.5886,lon:0.0824},{name:'Bucharest',date:'11 Jul 2014',lat:44.4268,lon:26.1025}]},
+{id:'JT9',year:2015,stops:[{name:'London',date:'13 Jul 2015',lat:51.5074,lon:-0.1278},{name:'Frankfurt',date:'9 Oct 2015',lat:50.1109,lon:8.6821},{name:'Stuttgart',date:'11 Oct 2015',lat:48.7758,lon:9.1829}]},
+{id:'JT10',year:2016,stops:[{name:'London',date:'12 Oct 2016',lat:51.5074,lon:-0.1278},{name:'Berlin',date:'18 Nov 2016',lat:52.52,lon:13.405},{name:'Leipzig',date:'18 Nov 2016',lat:51.3397,lon:12.3731},{name:'Dresden',date:'19 Nov 2016',lat:51.0504,lon:13.7373}]},
+{id:'JT11',year:2017,stops:[{name:'Cheltenham',date:'18 Jul 2017',lat:51.8994,lon:-2.0783},{name:'Warsaw',date:'3 Nov 2017',lat:52.2297,lon:21.0122}]},
+{id:'JT12',year:2018,stops:[{name:'London',date:'24 Nov 2018 (as supplied)',lat:51.5074,lon:-0.1278},{name:'Hamburg',date:'8 Jun 2018',lat:53.5511,lon:9.9937},{name:'Hanover',date:'8 Jun 2018',lat:52.3759,lon:9.732},{name:'Bremen',date:'9 Jun 2018',lat:53.0793,lon:8.8017}]},
+{id:'JT13',year:2019,stops:[{name:'London',date:'11 Jun 2019',lat:51.5074,lon:-0.1278},{name:'Groningen',date:'14 Jun 2019',lat:53.2194,lon:6.5665},{name:'Borkum',date:'15 Jun 2019',lat:53.588,lon:6.669},{name:'Groningen',date:'15 Jun 2019',lat:53.2194,lon:6.5665},{name:'Amsterdam',date:'16 Jun 2019',lat:52.3676,lon:4.9041}]},
+{id:'JT14',year:2022,stops:[{name:'London',date:'16 Jun 2022 (as supplied)',lat:51.5074,lon:-0.1278},{name:'Belgrade',date:'20 May 2022',lat:44.7866,lon:20.4489}]},
+{id:'JT15',year:2023,stops:[{name:'Brighton',date:'8 Jun 2023',lat:50.8225,lon:-0.1372},{name:'Knock / Carrowmore',date:'9 Jun 2023',lat:53.79,lon:-8.92},{name:'Galway',date:'9 Jun 2023',lat:53.2707,lon:-9.0568},{name:'Westport',date:'11 Jun 2023',lat:53.8008,lon:-9.5223},{name:'Swinford',date:'12 Jun 2023',lat:53.9399,lon:-8.9503}]},
+{id:'JT16',year:2024,stops:[{name:'London',date:'20 Sep 2024',lat:51.5074,lon:-0.1278},{name:'Oslo',date:'20 Sep 2024',lat:59.9139,lon:10.7522},{name:'Copenhagen',date:'21 Sep 2024',lat:55.6761,lon:12.5683},{name:'Malmö',date:'22 Sep 2024',lat:55.605,lon:13.0038}]},
+{id:'JT17',year:2025,stops:[{name:'Luton',date:'10 Sep 2025',lat:51.8787,lon:-0.42},{name:'Tiranë',date:'11 Sep 2025',lat:41.3275,lon:19.8187},{name:'Golem',date:'12 Sep 2025',lat:41.2458,lon:19.5347},{name:'Durrës',date:'12 Sep 2025',lat:41.3231,lon:19.4414},{name:'Vlorë',date:'13 Sep 2025',lat:40.4661,lon:19.4914}]}];
+var routeColours=[
+ '#1f77b4','#ff7f0e','#2ca02c','#d62728','#9467bd',
+ '#8c564b','#e377c2','#7f7f7f','#bcbd22','#17becf',
+ '#0057b8','#e83e8c','#6f42c1','#198754','#fd7e14',
+ '#0d6efd','#dc3545'
+];
+
+var map=L.map('trip-map').setView([51.5,10],4);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+var layers={};
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+trips.forEach(function(t,ti){
+ var g=L.layerGroup(), line=[];
+ t.stops.forEach(function(s,i){
+   line.push([s.lat,s.lon]);
+   var m=L.marker([s.lat,s.lon]).bindPopup('<b>'+esc(t.id)+' · Stop '+(i+1)+'</b><br>'+esc(s.name)+'<br>'+esc(s.date));
+   m.addTo(g);
+ });
+ var colour=routeColours[ti % routeColours.length];
+ L.polyline(line,{weight:4,opacity:.82,color:colour}).addTo(g);
+ layers[t.id]=g; g.addTo(map);
+ var btn=document.querySelector('.route-btn[data-route="'+t.id+'"]');
+ if(btn){
+   btn.style.borderLeft='8px solid '+colour;
+   btn.style.background='linear-gradient(90deg,'+colour+'18,white 34%)';
+ }
+});
+function fitVisible(ids){
+ var pts=[];
+ trips.forEach(function(t){if(ids.indexOf(t.id)>=0)t.stops.forEach(function(s){pts.push([s.lat,s.lon])})});
+ if(pts.length)map.fitBounds(pts,{padding:[30,30],maxZoom:7});
+}
+fitVisible(trips.map(function(t){return t.id}));
+document.querySelectorAll('.route-btn').forEach(function(b){
+ b.addEventListener('click',function(){
+  document.querySelectorAll('.route-btn').forEach(function(x){x.classList.remove('active')}); b.classList.add('active');
+  Object.keys(layers).forEach(function(k){map.removeLayer(layers[k])});
+  if(b.dataset.route==='ALL'){Object.keys(layers).forEach(function(k){layers[k].addTo(map)});fitVisible(Object.keys(layers));}
+  else{layers[b.dataset.route].addTo(map);fitVisible([b.dataset.route]);}
+ });
+});
+</script></body></html>

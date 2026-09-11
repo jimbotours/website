@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G Budd - Jimbo Tours (Solo Style - Part 2: Vilnius) | Jimbotours</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<div><a class="brand" href="../index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div>
+<nav><a href="../index.html">Home</a><a href="../trips.html">Trips</a><a href="../map.html">Map</a><a href="../timeline.html">Timeline</a><a href="../about.html">About</a></nav>
+</div>
+</header>
+
+<main class="article">
+<div class="entry-date">2009-10-23</div>
+<h1>G Budd - Jimbo Tours (Solo Style - Part 2: Vilnius)</h1>
+<div class="article-meta">WHAT A LOADA BALTICS &nbsp;·&nbsp; 0 photographs</div>
+
+<div class="diary-body">
+<P>So this is the second city.</p><P>Remember it well from the last time we were here in June. Much more livelier than Kaunas. Definitely more going on.</p><P>So Friday afternoon, checked into A Hostel, near the bus station. 34 Litas a night, in a dorm of 8. Not bad value, but the overall impression wasn't a good one. All the staff seemed to be over 45, the toilet/shower room always stank and the only regular in a strange looking common room, was an old bloke who used to watch films in Lithuanian - there didn't appear to be much life there.</p><P>It's a bit weird travelling around on your own, especially if u don't know the lingo. Some old fella the other day spent 5 mins talking to me in stern Russian (I had no idea what he was going on about) and all I did was nod and smile at him. For all I know, he was probably threatening to murder me! Got myself familiar with the surroundings again (and I'm afraid Shaun, that Tony Soprano has gone), I know this city better than I know Ilford now. Spent&nbsp; most of the nite in Bar Bobo, got chatting to a couple of locals - an old guy Edmund, who spoke hardly any English and kept calling me a 'Strong Englishman' (i soon dispelled that theory) and a younger guy who seemed to be the Lithuanian A. Kiely (he understood me enough for a conversation and was a popular man around the ladies). Left about 1am, forgetting that to get to the hostel, was like walking through Ilford late at night.</p><P>Next day (Sat), I put Jimbo Walking Tours to shame. I must have walked for at least 6 solid hours, went in numerous churches, up and down the castle (no flip flops this time Shaun) and visited the worst Wax Works museum in the whole of Eastern Europe. Robbie Coltrane was thin, Cliff Richard looked like Elton John and John Travolta was an asian! At least Hitler looked like a Nazi! Came back, absolutely shattered, had a blow, got changed and went out for the night. It was interesting, that I met an English stag party (all in their 40's) that were from Bolton, they had travelled from Manchester Airport with Lufthansa (via Frankfurt and Tallinn), their journey took the best part of 15 hrs. Thankfully London flies direct!</p><P>But it was at this point I'd realised I'd made 2 errors, which I will remember for future tours. 1) I should have moved hostel, cos it was crap basically and there was no life or interaction there and 2) I forgot the clocks went back, meaning I had an extra hour. By the time I'd got to Prospekto Bar/Club I was so cream crackered, I could only muster it for a little bit, then went back through the dark alleys. I realise now i should have planned the whole day better, still its all experience.</p><P>And now the last day...</p>
+</div>
+
+
+
+<div class="pager"><div><a href='2009-10-21-g-budd-jimbo-tours-solo-style-part-1-kaunas-629741.html'>&larr; G Budd - Jimbo Tours (Solo Style - Part 1: Kaunas)</a></div><div><a href='2010-03-07-jimbo-tours-2010-720674.html'>JIMBO TOURS 2010 &rarr;</a></div></div>
+</main>
+<div id="lightbox" class="lightbox"><button aria-label="Close">&times;</button><img alt=""><div class="lb-controls"><button class="lb-prev" aria-label="Previous photo">&#8249;</button><button class="lb-next" aria-label="Next photo">&#8250;</button></div><div class="lb-caption"></div></div>
+
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var box=document.getElementById("lightbox");
+  if(box){
+    var pic=box.querySelector("img"), cap=box.querySelector(".lb-caption");
+    var links=Array.from(document.querySelectorAll("a.lb")), idx=0;
+    function show(n){
+      if(!links.length)return;
+      idx=(n+links.length)%links.length;
+      pic.src=links[idx].href;
+      var im=links[idx].querySelector("img");
+      cap.textContent=im ? (im.alt||"") : "";
+      box.classList.add("open");
+    }
+    links.forEach(function(a,i){a.addEventListener("click",function(e){e.preventDefault();show(i);});});
+    var prev=box.querySelector(".lb-prev"), next=box.querySelector(".lb-next");
+    if(prev) prev.addEventListener("click",function(e){e.stopPropagation();show(idx-1);});
+    if(next) next.addEventListener("click",function(e){e.stopPropagation();show(idx+1);});
+    box.addEventListener("click",function(e){
+      if(e.target===box || (e.target.tagName==="BUTTON" && !e.target.classList.contains("lb-prev") && !e.target.classList.contains("lb-next"))){
+        box.classList.remove("open");pic.src="";
+      }
+    });
+    document.addEventListener("keydown",function(e){
+      if(!box.classList.contains("open"))return;
+      if(e.key==="Escape"){box.classList.remove("open");pic.src="";}
+      if(e.key==="ArrowLeft")show(idx-1);
+      if(e.key==="ArrowRight")show(idx+1);
+    });
+  }
+  document.querySelectorAll(".trip-card img").forEach(function(img){
+    img.addEventListener("error",function(){
+      var card=img.closest(".trip-card");
+      img.remove();
+      if(card) card.classList.add("no-photo");
+    });
+  });
+});
+</script>
+
+</body>
+</html>

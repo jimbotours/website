@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIG BATH | Jimbotours</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<div><a class="brand" href="../index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div>
+<nav><a href="../index.html">Home</a><a href="../trips.html">Trips</a><a href="../map.html">Map</a><a href="../timeline.html">Timeline</a><a href="../about.html">About</a></nav>
+</div>
+</header>
+
+<main class="article">
+<div class="entry-date">2008-06-11</div>
+<h1>BIG BATH</h1>
+<div class="article-meta">BERLIN OR BUST &nbsp;·&nbsp; 7 photographs</div>
+
+<div class="diary-body">
+<P>Bang - long day.</p><P>Last night we went for a couple in a local bar. I couldnt open the door to the toilet and to the amazement of a couple of locals at the bar a little old lady had to open it for me. When I came out the local had a shot of UNICUM ready for me - he said it would make me strong. It tasted rough as f*** - so we had another!!</p><P>Then went to a pub called Old mans bar - they put the prices up by 100% coz we were tourists - fuckers - so we left.</p><P>Today me and steve went on a 4 and a half hour bile tour round Budapest. Very good but very sweat in 100f heat so we were well ready for what we all did next - a visit to a Budapest Baths and Spa. This was wicked - the feeling when you get into a 38c bath was amazing!!</p><P>Went to a steam room which was bloody hot - steve left first as it blinded him followed by me john and Shaun managed a good bit - then we all plunged into a freezing pool - wow. Before we left we had to have a Bidit which was lts saz a refreshing experience!! This was followed by a massively Posh packing meal and back to the hostel for a blow.</p><P>The road to Berlin comes at 12pm tommorrow with a flight and get on it!!</p><P>EAST</p>
+</div>
+
+<h2>Photographs</h2><div class='gallery'><figure><a class='lb' href='../assets/photos/2008/5011616.JPG'><img loading='lazy' src='../assets/photos/2008/5011616.JPG' alt='Jimbo and Steve look about to die after cycling up to the castle'></a><figcaption>Jimbo and Steve look about to die after cycling up to the castle</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5011617.JPG'><img loading='lazy' src='../assets/photos/2008/5011617.JPG' alt='Steve gets straight in at 10am in the morning'></a><figcaption>Steve gets straight in at 10am in the morning</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5011618.JPG'><img loading='lazy' src='../assets/photos/2008/5011618.JPG' alt='Steve finally gets his sentence for missing his round'></a><figcaption>Steve finally gets his sentence for missing his round</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5011619.JPG'><img loading='lazy' src='../assets/photos/2008/5011619.JPG' alt='From Budapest'></a><figcaption>From Budapest</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5011620.JPG'><img loading='lazy' src='../assets/photos/2008/5011620.JPG' alt='Get me off this Bike'></a><figcaption>Get me off this Bike</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5011621.JPG'><img loading='lazy' src='../assets/photos/2008/5011621.JPG' alt='But I couldnt find the statue to Paul Terry anywhere'></a><figcaption>But I couldnt find the statue to Paul Terry anywhere</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5011622.JPG'><img loading='lazy' src='../assets/photos/2008/5011622.JPG' alt='Verz nice'></a><figcaption>Verz nice</figcaption></figure></div>
+
+<div class="pager"><div><a href='2008-06-10-budapest-action-so-far-492012.html'>&larr; Budapest Action So Far</a></div><div><a href='2008-06-12-the-final-furlong-492591.html'>The Final Furlong... &rarr;</a></div></div>
+</main>
+<div id="lightbox" class="lightbox"><button aria-label="Close">&times;</button><img alt=""><div class="lb-controls"><button class="lb-prev" aria-label="Previous photo">&#8249;</button><button class="lb-next" aria-label="Next photo">&#8250;</button></div><div class="lb-caption"></div></div>
+
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var box=document.getElementById("lightbox");
+  if(box){
+    var pic=box.querySelector("img"), cap=box.querySelector(".lb-caption");
+    var links=Array.from(document.querySelectorAll("a.lb")), idx=0;
+    function show(n){
+      if(!links.length)return;
+      idx=(n+links.length)%links.length;
+      pic.src=links[idx].href;
+      var im=links[idx].querySelector("img");
+      cap.textContent=im ? (im.alt||"") : "";
+      box.classList.add("open");
+    }
+    links.forEach(function(a,i){a.addEventListener("click",function(e){e.preventDefault();show(i);});});
+    var prev=box.querySelector(".lb-prev"), next=box.querySelector(".lb-next");
+    if(prev) prev.addEventListener("click",function(e){e.stopPropagation();show(idx-1);});
+    if(next) next.addEventListener("click",function(e){e.stopPropagation();show(idx+1);});
+    box.addEventListener("click",function(e){
+      if(e.target===box || (e.target.tagName==="BUTTON" && !e.target.classList.contains("lb-prev") && !e.target.classList.contains("lb-next"))){
+        box.classList.remove("open");pic.src="";
+      }
+    });
+    document.addEventListener("keydown",function(e){
+      if(!box.classList.contains("open"))return;
+      if(e.key==="Escape"){box.classList.remove("open");pic.src="";}
+      if(e.key==="ArrowLeft")show(idx-1);
+      if(e.key==="ArrowRight")show(idx+1);
+    });
+  }
+  document.querySelectorAll(".trip-card img").forEach(function(img){
+    img.addEventListener("error",function(){
+      var card=img.closest(".trip-card");
+      img.remove();
+      if(card) card.classList.add("no-photo");
+    });
+  });
+});
+</script>
+
+</body>
+</html>

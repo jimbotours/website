@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JIMBO TOURS 2010 | Jimbotours</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<div><a class="brand" href="../index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div>
+<nav><a href="../index.html">Home</a><a href="../trips.html">Trips</a><a href="../map.html">Map</a><a href="../timeline.html">Timeline</a><a href="../about.html">About</a></nav>
+</div>
+</header>
+
+<main class="article">
+<div class="entry-date">2010-03-07</div>
+<h1>JIMBO TOURS 2010</h1>
+<div class="article-meta">WHAT A LOADA BALTICS &nbsp;·&nbsp; 0 photographs</div>
+
+<div class="diary-body">
+<P>Boys,</p><P>Its that time of year again. Leave down your glass of red wine and cheese board - its time to hit Europe for the 4th (and best) time.</p><P>Stevie B is back on board this year and has been doing some pre-tour planning.</p><P>The plan is to go on thurs 10th of June and return the sat or sunday 19th/20th. This will be the first week of the World Cup which will play a big part in our trip.</p><P>As always i need some info of each person. So please post your answers to the following questions:</p><P>1. Are you up for it?</p><P>2. As&nbsp;people might not wanna go for the 8 days there's a possibilty of coming out on the sat 13th - is this you?</p><P>3. any city you want to go to?</p><P>Thats all for the moment. PLease&nbsp;post your message asap so planning and payment can commence</p><P>EAST&nbsp;</p>
+</div>
+
+
+
+<div class="pager"><div><a href='2009-10-23-g-budd-jimbo-tours-solo-style-part-2-vilnius-630217.html'>&larr; G Budd - Jimbo Tours (Solo Style - Part 2: Vilnius)</a></div><div><a href='2010-06-08-here-we-go-again-853875.html'>HERE WE GO AGAIN &rarr;</a></div></div>
+</main>
+<div id="lightbox" class="lightbox"><button aria-label="Close">&times;</button><img alt=""><div class="lb-controls"><button class="lb-prev" aria-label="Previous photo">&#8249;</button><button class="lb-next" aria-label="Next photo">&#8250;</button></div><div class="lb-caption"></div></div>
+
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var box=document.getElementById("lightbox");
+  if(box){
+    var pic=box.querySelector("img"), cap=box.querySelector(".lb-caption");
+    var links=Array.from(document.querySelectorAll("a.lb")), idx=0;
+    function show(n){
+      if(!links.length)return;
+      idx=(n+links.length)%links.length;
+      pic.src=links[idx].href;
+      var im=links[idx].querySelector("img");
+      cap.textContent=im ? (im.alt||"") : "";
+      box.classList.add("open");
+    }
+    links.forEach(function(a,i){a.addEventListener("click",function(e){e.preventDefault();show(i);});});
+    var prev=box.querySelector(".lb-prev"), next=box.querySelector(".lb-next");
+    if(prev) prev.addEventListener("click",function(e){e.stopPropagation();show(idx-1);});
+    if(next) next.addEventListener("click",function(e){e.stopPropagation();show(idx+1);});
+    box.addEventListener("click",function(e){
+      if(e.target===box || (e.target.tagName==="BUTTON" && !e.target.classList.contains("lb-prev") && !e.target.classList.contains("lb-next"))){
+        box.classList.remove("open");pic.src="";
+      }
+    });
+    document.addEventListener("keydown",function(e){
+      if(!box.classList.contains("open"))return;
+      if(e.key==="Escape"){box.classList.remove("open");pic.src="";}
+      if(e.key==="ArrowLeft")show(idx-1);
+      if(e.key==="ArrowRight")show(idx+1);
+    });
+  }
+  document.querySelectorAll(".trip-card img").forEach(function(img){
+    img.addEventListener("error",function(){
+      var card=img.closest(".trip-card");
+      img.remove();
+      if(card) card.classList.add("no-photo");
+    });
+  });
+});
+</script>
+
+</body>
+</html>

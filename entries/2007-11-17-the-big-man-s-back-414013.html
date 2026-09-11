@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The BIG man&#39;s back. | Jimbotours</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<div><a class="brand" href="../index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div>
+<nav><a href="../index.html">Home</a><a href="../trips.html">Trips</a><a href="../map.html">Map</a><a href="../timeline.html">Timeline</a><a href="../about.html">About</a></nav>
+</div>
+</header>
+
+<main class="article">
+<div class="entry-date">2007-11-17</div>
+<h1>The BIG man&#39;s back.</h1>
+<div class="article-meta">EAST MEETS EAST &nbsp;·&nbsp; 1 photographs</div>
+
+<div class="diary-body">
+<P>After getting lost on the way home and ending up in a backwards village called &quot;Lurgan&quot; in a far off part of the empire Stevie B aka Callum is back on his travels.</p><P>He sets sail on Saturday morning for Sunny London to experience the finest football in the land and also to continue his important work into Cup Size testing which he worked so diligently at&nbsp;whilst in Germany, Poland and Prague.</p><P>To mark this event the website will be re-activated for 3 DAYS ONLY...</p><P>More to follow over the weekend....enjoy</p><P>EAST</p>
+</div>
+
+<h2>Photographs</h2><div class='gallery'><figure><a class='lb' href='../assets/photos/2007/2995234.jpg'><img loading='lazy' src='../assets/photos/2007/2995234.jpg' alt='Steve loses use of an eye as well as his wallet on holiday'></a><figcaption>Steve loses use of an eye as well as his wallet on holiday</figcaption></figure></div>
+
+<div class="pager"><div><a href='2007-06-22-final-questionaire-345746.html'>&larr; FINAL QUESTIONAIRE</a></div><div><a href='2008-04-16-here-we-go-again-474254.html'>HERE WE GO AGAIN!!!! &rarr;</a></div></div>
+</main>
+<div id="lightbox" class="lightbox"><button aria-label="Close">&times;</button><img alt=""><div class="lb-controls"><button class="lb-prev" aria-label="Previous photo">&#8249;</button><button class="lb-next" aria-label="Next photo">&#8250;</button></div><div class="lb-caption"></div></div>
+
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var box=document.getElementById("lightbox");
+  if(box){
+    var pic=box.querySelector("img"), cap=box.querySelector(".lb-caption");
+    var links=Array.from(document.querySelectorAll("a.lb")), idx=0;
+    function show(n){
+      if(!links.length)return;
+      idx=(n+links.length)%links.length;
+      pic.src=links[idx].href;
+      var im=links[idx].querySelector("img");
+      cap.textContent=im ? (im.alt||"") : "";
+      box.classList.add("open");
+    }
+    links.forEach(function(a,i){a.addEventListener("click",function(e){e.preventDefault();show(i);});});
+    var prev=box.querySelector(".lb-prev"), next=box.querySelector(".lb-next");
+    if(prev) prev.addEventListener("click",function(e){e.stopPropagation();show(idx-1);});
+    if(next) next.addEventListener("click",function(e){e.stopPropagation();show(idx+1);});
+    box.addEventListener("click",function(e){
+      if(e.target===box || (e.target.tagName==="BUTTON" && !e.target.classList.contains("lb-prev") && !e.target.classList.contains("lb-next"))){
+        box.classList.remove("open");pic.src="";
+      }
+    });
+    document.addEventListener("keydown",function(e){
+      if(!box.classList.contains("open"))return;
+      if(e.key==="Escape"){box.classList.remove("open");pic.src="";}
+      if(e.key==="ArrowLeft")show(idx-1);
+      if(e.key==="ArrowRight")show(idx+1);
+    });
+  }
+  document.querySelectorAll(".trip-card img").forEach(function(img){
+    img.addEventListener("error",function(){
+      var card=img.closest(".trip-card");
+      img.remove();
+      if(card) card.classList.add("no-photo");
+    });
+  });
+});
+</script>
+
+</body>
+</html>

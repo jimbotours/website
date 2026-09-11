@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Into the ghetto | Jimbotours</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<div><a class="brand" href="../index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div>
+<nav><a href="../index.html">Home</a><a href="../trips.html">Trips</a><a href="../map.html">Map</a><a href="../timeline.html">Timeline</a><a href="../about.html">About</a></nav>
+</div>
+</header>
+
+<main class="article">
+<div class="entry-date">2017-11-05</div>
+<h1>Into the ghetto</h1>
+<div class="article-meta">JT11-Warsaw,WeCame,WeConquered &nbsp;·&nbsp; 1 photographs</div>
+
+<div class="diary-body">
+<P>After 11 years of touring we are back in the country where it all started in the long, hot summer of 2007, Poland.</p><P></p><P>As always this part of the world doesn&rsquo;t disappoint in terms of pig based meals, strong beers and sweet and juicy fruit in abundance. Coupled with a good dash of WW2 history Warsaw is a surprisingly good town to visit.</p><P></p><P>We&rsquo;re staying in a traditional hostel on the top floor of a 1930&rsquo;s ex communist building. It ticks all the boxes, nice bar, plentiful showers, Mcdonald&rsquo;s round the corner and a full room of fellow travelers for Shaun to keep entertained each night with his thunderous snoring! There&rsquo;s even a young couple bunking in together in what looks like their honeymoon- they don&rsquo;t know how lucky they are that Stevie B is having a 1 year sabbatical otherwise they&rsquo;d be sure to be joined in the marital bed by a drunk, horny Irish man each night when we land back&nbsp;at 3am.</p><P></p><P>Our final full day in Warsaw started with the standard free walking tour. &nbsp;Amazingly Shaun lasted a full 35 mins of the 2 hour tour on the Jewish history of Warsaw before huffing, puffing and moaning before slipping off for a beer.</p><P></p><P>We then headed out for a few beers in the beautiful old town. The polish must have a government directed control on the amount of alcohol people consume limiting people to no more than 1 beer an hour - this is the only way to explain the absolute age that it takes for waiter to bring you your beer after ordering it. Come to think of it the polish tardiness in the service sector is not confined to just bars - everywhere we went no one was in any hurry, from the coffee shop that took an age that knock out an americano to the Mcdonald&rsquo;s where I thought Shaun was gonna shove a happy meal toy where the sun doesn&rsquo;t shine of the guy handing out the food without getting out of first gear dispute the hungry hordes</p><P>Waiting on their burgers. It&rsquo;s obvious now that all the best poles are in the UK working and the people left at home are just about ticking along.</p><P></p><P>We watched West Ham get a schooling from Liverpool in an Irish bar and were well looked after for a change by a fist pumping waiter cum MMA fighter. Buoyed by the football we headed out into the cold night and wandered into a few cute bars that took our fancy.</p><P></p><P>In 1 bar we were joined by Stevie B live from the 11.56 Belfast to portadown service via Skype. Whatever Steve said in the conversation the girl behind the bar took pity on us and knocked us up 2 vodka and Tabasco sauce shots for us - not good for heartburn after the last 24hrs intake.</p><P></p><P>The rest of the night followed the age old tradition of looking for &lsquo;The Door&rsquo; (RP, 2012) Despite not finding it this time Warsaw is an easy city to have a good night out in. Theres lovely little bars down nearly every side street and there&rsquo;s no such thing as a closing time so the town was still in full swing when we headed out&nbsp;around 3am.</p><P></p><P>Warsaw has been a good stop and we could have done with another day to cross a few museums off (maybe not Shaun). As always this part of the world doesn&rsquo;t disappoint and after 11 years our thirst for a couple of days and nights getting stuck into a city is unquenchable.</p><P></p><P>On to next summer and the dirty dozen . . .&nbsp;</p><P></p><P>East</p>
+</div>
+
+<h2>Photographs</h2><div class='gallery'><figure><a class='lb' href='../assets/photos/2017/9511723.JPG'><img loading='lazy' src='../assets/photos/2017/9511723.JPG' alt='EA22B23B B59D 4F70 9F7D E4358BB4F227'></a><figcaption>EA22B23B B59D 4F70 9F7D E4358BB4F227</figcaption></figure></div>
+
+<div class="pager"><div><a href='2017-11-03-the-second-decade-starts-here-5975452.html'>&larr; The Second Decade Starts Here</a></div><div><a href='2018-06-08-the-dirty-dozen-6733955.html'>The dirty dozen &rarr;</a></div></div>
+</main>
+<div id="lightbox" class="lightbox"><button aria-label="Close">&times;</button><img alt=""><div class="lb-controls"><button class="lb-prev" aria-label="Previous photo">&#8249;</button><button class="lb-next" aria-label="Next photo">&#8250;</button></div><div class="lb-caption"></div></div>
+
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var box=document.getElementById("lightbox");
+  if(box){
+    var pic=box.querySelector("img"), cap=box.querySelector(".lb-caption");
+    var links=Array.from(document.querySelectorAll("a.lb")), idx=0;
+    function show(n){
+      if(!links.length)return;
+      idx=(n+links.length)%links.length;
+      pic.src=links[idx].href;
+      var im=links[idx].querySelector("img");
+      cap.textContent=im ? (im.alt||"") : "";
+      box.classList.add("open");
+    }
+    links.forEach(function(a,i){a.addEventListener("click",function(e){e.preventDefault();show(i);});});
+    var prev=box.querySelector(".lb-prev"), next=box.querySelector(".lb-next");
+    if(prev) prev.addEventListener("click",function(e){e.stopPropagation();show(idx-1);});
+    if(next) next.addEventListener("click",function(e){e.stopPropagation();show(idx+1);});
+    box.addEventListener("click",function(e){
+      if(e.target===box || (e.target.tagName==="BUTTON" && !e.target.classList.contains("lb-prev") && !e.target.classList.contains("lb-next"))){
+        box.classList.remove("open");pic.src="";
+      }
+    });
+    document.addEventListener("keydown",function(e){
+      if(!box.classList.contains("open"))return;
+      if(e.key==="Escape"){box.classList.remove("open");pic.src="";}
+      if(e.key==="ArrowLeft")show(idx-1);
+      if(e.key==="ArrowRight")show(idx+1);
+    });
+  }
+  document.querySelectorAll(".trip-card img").forEach(function(img){
+    img.addEventListener("error",function(){
+      var card=img.closest(".trip-card");
+      img.remove();
+      if(card) card.classList.add("no-photo");
+    });
+  });
+});
+</script>
+
+</body>
+</html>

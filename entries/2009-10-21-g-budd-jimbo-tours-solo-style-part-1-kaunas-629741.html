@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G Budd - Jimbo Tours (Solo Style - Part 1: Kaunas) | Jimbotours</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<div><a class="brand" href="../index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div>
+<nav><a href="../index.html">Home</a><a href="../trips.html">Trips</a><a href="../map.html">Map</a><a href="../timeline.html">Timeline</a><a href="../about.html">About</a></nav>
+</div>
+</header>
+
+<main class="article">
+<div class="entry-date">2009-10-21</div>
+<h1>G Budd - Jimbo Tours (Solo Style - Part 1: Kaunas)</h1>
+<div class="article-meta">WHAT A LOADA BALTICS &nbsp;·&nbsp; 0 photographs</div>
+
+<div class="diary-body">
+<P>Good Afternoon,</p><P>Yes its true, after having so much fun on the hugely successful Jimbo Tours, I have now decided to fly solo and branch out myself.</p><P>Just spending 5 nights in Lithuania, catch up on old times (well 4 months ago), enjoy the history and carry on sampling the excellent food and cheap bier.</p><P>Arrived in Kaunas on Weds at about 12. Was on the number 29 bus from the airport, went right &nbsp;through the town centre and ended up in the arse end of nowhere (it was a bit reminiscent of our last visit here - bloody scary and no-one seemed to speak&nbsp;Angleterre!).</p><P>Managed to find the city via foot (a lot of walking and with no pretzels!!) Then spent over 3 hours looking for a hostel (there are only 2 in the city), couldn't find either, gave up and ended up booking into a religious guesthouse -&nbsp;it was about 30 quid a night :(</p><P>But my whole body was knackered and i was bored of trying to find a hostel. It is times like this that i then realise how much planning goes into a proper Jimbo Tour and that i am one of life's followers, not leaders.</p><P>Kaunas itself was pretty boring and non descript. Very few bars, about 3 casinos (i didn't go in Shaun), English at a raw premium yet the birds are different gravy - and all seem to wear knee high boots, have glasses and long hair. i dunno wot they stick in the water round there but Ilford should purchase some of it! By the way i saw just&nbsp;2 women, of ethnic minority,&nbsp;out there and both of them were fit!</p><P>Weds nite went like this - ended up in a restaurant, ate roast pork with flank (?) - bloody tasty, got talking to some fellas at the bar (one of whom was a delivery driver in Wolverhampton) and they got me into a students nite club. They kept buying me drinks as well (and i don't think they were drugged), so it was a right result.</p><P>Thurs went to plan. Spent most of the day walking around, visited 2 musems and a presidential palace, had loads of kwaffee, got back to the guesthouse about 6 ish. Had a rest, went out, ate more food, with the odd bier and then came back early. I was conscious of the next leg of the trip, so thought i'd take it easy.</p><P>So thats it so far, arrived in Vilnius at 1pm. It took about an hour and 40 mins from Kaunas (its 100km) on the coach, some of the roads definitely need some Irish labour. Checked into a hostel about half an&nbsp;hour&nbsp;ago, seems a bit weird but its got a bar so it can't be all bad.</p><P>Anyway that's all for now, updates to follow...</p><P>EAST</p>
+</div>
+
+
+
+<div class="pager"><div><a href='2009-06-14-questionaire-2009-594704.html'>&larr; QUESTIONAIRE 2009</a></div><div><a href='2009-10-23-g-budd-jimbo-tours-solo-style-part-2-vilnius-630217.html'>G Budd - Jimbo Tours (Solo Style - Part 2: Vilnius) &rarr;</a></div></div>
+</main>
+<div id="lightbox" class="lightbox"><button aria-label="Close">&times;</button><img alt=""><div class="lb-controls"><button class="lb-prev" aria-label="Previous photo">&#8249;</button><button class="lb-next" aria-label="Next photo">&#8250;</button></div><div class="lb-caption"></div></div>
+
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var box=document.getElementById("lightbox");
+  if(box){
+    var pic=box.querySelector("img"), cap=box.querySelector(".lb-caption");
+    var links=Array.from(document.querySelectorAll("a.lb")), idx=0;
+    function show(n){
+      if(!links.length)return;
+      idx=(n+links.length)%links.length;
+      pic.src=links[idx].href;
+      var im=links[idx].querySelector("img");
+      cap.textContent=im ? (im.alt||"") : "";
+      box.classList.add("open");
+    }
+    links.forEach(function(a,i){a.addEventListener("click",function(e){e.preventDefault();show(i);});});
+    var prev=box.querySelector(".lb-prev"), next=box.querySelector(".lb-next");
+    if(prev) prev.addEventListener("click",function(e){e.stopPropagation();show(idx-1);});
+    if(next) next.addEventListener("click",function(e){e.stopPropagation();show(idx+1);});
+    box.addEventListener("click",function(e){
+      if(e.target===box || (e.target.tagName==="BUTTON" && !e.target.classList.contains("lb-prev") && !e.target.classList.contains("lb-next"))){
+        box.classList.remove("open");pic.src="";
+      }
+    });
+    document.addEventListener("keydown",function(e){
+      if(!box.classList.contains("open"))return;
+      if(e.key==="Escape"){box.classList.remove("open");pic.src="";}
+      if(e.key==="ArrowLeft")show(idx-1);
+      if(e.key==="ArrowRight")show(idx+1);
+    });
+  }
+  document.querySelectorAll(".trip-card img").forEach(function(img){
+    img.addEventListener("error",function(){
+      var card=img.closest(".trip-card");
+      img.remove();
+      if(card) card.classList.add("no-photo");
+    });
+  });
+});
+</script>
+
+</body>
+</html>

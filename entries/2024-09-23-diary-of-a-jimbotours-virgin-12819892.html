@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diary of a Jimbotours Virgin | Jimbotours</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<div><a class="brand" href="../index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div>
+<nav><a href="../index.html">Home</a><a href="../trips.html">Trips</a><a href="../map.html">Map</a><a href="../timeline.html">Timeline</a><a href="../about.html">About</a></nav>
+</div>
+</header>
+
+<main class="article">
+<div class="entry-date">2024-09-23</div>
+<h1>Diary of a Jimbotours Virgin</h1>
+<div class="article-meta">JT16 - Scandilush &nbsp;·&nbsp; 2 photographs</div>
+
+<div class="diary-body">
+<P>As with tradition, I was not told the destination beforehand, arriving at Gatwick with just a QR code to work with, I trundled my way through security to the departure lounge. Still no word from Jimbo, still no idea where I&rsquo;m going. It was 9.15, flight leaving at 10. Multiple flights leaving at 10! Aaaargh....Finally I got the confirmation text, the destination is the land of fairytales, Copenhagen.After a 90 minute delay sitting on the runway due to thunderstorms at Gatwick, I finally arrived to my first jimbotours to be greeted at the airport by the legend that is Shaun (lets not mention Oslo) Galvin.</p><P>We made our way into the city to meet the rest of the crew (well what we thought was the rest of the crew). As we settled into another beer in the sun while watching a paddle board race along the river, a figure emerged from behind the beer tent, it was Stevie B. The motley crue of 6 troops was all set.&nbsp; We spent the evening wandering around the various alcoholic establishments Copenhagen had to offer, and there are many. A cracking city.</p><P>The one thing I have learned is that you never know what&rsquo;s around the corner with a jimbo tour. After a night/morning in the worlds greatest hostel and a quick walking tour of the city, there was no rest for the wicked, the troops were off to Malmo and without doubt the craziest place I have ever stayed, the Grand Circus Hotel. A place that can only be described as post-apocalyptic! Sharing a bunk bed in a converted circus wagon with an escape room was certainly not on the expected list but here we were.</p><P>But with jimbotours you have to expect the unexpected.I will be returning for JT17!</p>
+</div>
+
+<h2>Photographs</h2><div class='gallery'><figure><a class='lb' href='../assets/photos/2024/9707755.JPG'><img loading='lazy' src='../assets/photos/2024/9707755.JPG' alt='1000003617'></a><figcaption>1000003617</figcaption></figure><figure><a class='lb' href='../assets/photos/2024/9707782.JPG'><img loading='lazy' src='../assets/photos/2024/9707782.JPG' alt='1000003908'></a><figcaption>1000003908</figcaption></figure></div>
+
+<div class="pager"><div><a href='2024-09-22-what-a-circus-this-tour-has-become-12819890.html'>&larr; What A Circus This Tour Has Become</a></div><div><a href='2025-09-11-do-you-wanna-ride-my-car-12956349.html'>Do you wanna ride my car…. &rarr;</a></div></div>
+</main>
+<div id="lightbox" class="lightbox"><button aria-label="Close">&times;</button><img alt=""><div class="lb-controls"><button class="lb-prev" aria-label="Previous photo">&#8249;</button><button class="lb-next" aria-label="Next photo">&#8250;</button></div><div class="lb-caption"></div></div>
+
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var box=document.getElementById("lightbox");
+  if(box){
+    var pic=box.querySelector("img"), cap=box.querySelector(".lb-caption");
+    var links=Array.from(document.querySelectorAll("a.lb")), idx=0;
+    function show(n){
+      if(!links.length)return;
+      idx=(n+links.length)%links.length;
+      pic.src=links[idx].href;
+      var im=links[idx].querySelector("img");
+      cap.textContent=im ? (im.alt||"") : "";
+      box.classList.add("open");
+    }
+    links.forEach(function(a,i){a.addEventListener("click",function(e){e.preventDefault();show(i);});});
+    var prev=box.querySelector(".lb-prev"), next=box.querySelector(".lb-next");
+    if(prev) prev.addEventListener("click",function(e){e.stopPropagation();show(idx-1);});
+    if(next) next.addEventListener("click",function(e){e.stopPropagation();show(idx+1);});
+    box.addEventListener("click",function(e){
+      if(e.target===box || (e.target.tagName==="BUTTON" && !e.target.classList.contains("lb-prev") && !e.target.classList.contains("lb-next"))){
+        box.classList.remove("open");pic.src="";
+      }
+    });
+    document.addEventListener("keydown",function(e){
+      if(!box.classList.contains("open"))return;
+      if(e.key==="Escape"){box.classList.remove("open");pic.src="";}
+      if(e.key==="ArrowLeft")show(idx-1);
+      if(e.key==="ArrowRight")show(idx+1);
+    });
+  }
+  document.querySelectorAll(".trip-card img").forEach(function(img){
+    img.addEventListener("error",function(){
+      var card=img.closest(".trip-card");
+      img.remove();
+      if(card) card.classList.add("no-photo");
+    });
+  });
+});
+</script>
+
+</body>
+</html>

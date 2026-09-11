@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Last day in Vienna | Jimbotours</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<div><a class="brand" href="../index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div>
+<nav><a href="../index.html">Home</a><a href="../trips.html">Trips</a><a href="../map.html">Map</a><a href="../timeline.html">Timeline</a><a href="../about.html">About</a></nav>
+</div>
+</header>
+
+<main class="article">
+<div class="entry-date">2008-06-08</div>
+<h1>Last day in Vienna</h1>
+<div class="article-meta">BERLIN OR BUST &nbsp;·&nbsp; 9 photographs</div>
+
+<div class="diary-body">
+<P>After 5 days here we had our final day in Vienna and it was also G Budds final day on tour before returning home for a big job on the sports areana.</p><P>We started the day with a final Jimbo Tour which covered 24 stops and lasted 4 hours. After word had spread about how good the tours were there was a capacity crowd in attendance of 7 including 3 different nationalities. Thje tour was given in English as well as the Austian Jimbo had picked up.</p><P>After all the hard work of the tour we headed to the Fanzone for the first of 2 matched - Croatia vs Austria. The place was packed with Croatians who were good craic. We also met an English guy who worked in TV over here and was fasinated by the sticker book story and has promised to follow it tour until we complete it.</p><P>During the 2nd game, Germany vs Poland the heavens openned and it lashed down for an hour. every one ran for cover. most of us went back to the hostel - g budd stayed in the fanzone and took cover in a portaloo with 3 croatian blokes for 3 hours - they will remain firm friends.</p><P>Vienna has been brilliant. Met loads of great people and had a lot of craic.</p><P>Bring on Hungary</p>
+</div>
+
+<h2>Photographs</h2><div class='gallery'><figure><a class='lb' href='../assets/photos/2008/5005327.JPG'><img loading='lazy' src='../assets/photos/2008/5005327.JPG' alt='G budd and Jimbo wiggle their stuff'></a><figcaption>G budd and Jimbo wiggle their stuff</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5005328.JPG'><img loading='lazy' src='../assets/photos/2008/5005328.JPG' alt='A man invites us to become mayor of his city'></a><figcaption>A man invites us to become mayor of his city</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5005329.JPG'><img loading='lazy' src='../assets/photos/2008/5005329.JPG' alt='And its not steve'></a><figcaption>And its not steve</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5005330.JPG'><img loading='lazy' src='../assets/photos/2008/5005330.JPG' alt='G budds last beer in vienna'></a><figcaption>G budds last beer in vienna</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5005331.JPG'><img loading='lazy' src='../assets/photos/2008/5005331.JPG' alt='Jumping as ever'></a><figcaption>Jumping as ever</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5005333.JPG'><img loading='lazy' src='../assets/photos/2008/5005333.JPG' alt='Steve gets turned into a red indian by locals'></a><figcaption>Steve gets turned into a red indian by locals</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5005334.JPG'><img loading='lazy' src='../assets/photos/2008/5005334.JPG' alt='From a croatian fan'></a><figcaption>From a croatian fan</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5005335.JPG'><img loading='lazy' src='../assets/photos/2008/5005335.JPG' alt='But still proud. as g budd says &amp;quot;football was the only winner&amp;quot;'></a><figcaption>But still proud. as g budd says &amp;quot;football was the only winner&amp;quot;</figcaption></figure><figure><a class='lb' href='../assets/photos/2008/5005336.JPG'><img loading='lazy' src='../assets/photos/2008/5005336.JPG' alt='Over the fanzone'></a><figcaption>Over the fanzone</figcaption></figure></div>
+
+<div class="pager"><div><a href='2008-06-07-let-the-games-begin-491275.html'>&larr; Let the Games begin</a></div><div><a href='2008-06-09-we-re-in-budapest-491927.html'>We&#39;re in Budapest!! &rarr;</a></div></div>
+</main>
+<div id="lightbox" class="lightbox"><button aria-label="Close">&times;</button><img alt=""><div class="lb-controls"><button class="lb-prev" aria-label="Previous photo">&#8249;</button><button class="lb-next" aria-label="Next photo">&#8250;</button></div><div class="lb-caption"></div></div>
+
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var box=document.getElementById("lightbox");
+  if(box){
+    var pic=box.querySelector("img"), cap=box.querySelector(".lb-caption");
+    var links=Array.from(document.querySelectorAll("a.lb")), idx=0;
+    function show(n){
+      if(!links.length)return;
+      idx=(n+links.length)%links.length;
+      pic.src=links[idx].href;
+      var im=links[idx].querySelector("img");
+      cap.textContent=im ? (im.alt||"") : "";
+      box.classList.add("open");
+    }
+    links.forEach(function(a,i){a.addEventListener("click",function(e){e.preventDefault();show(i);});});
+    var prev=box.querySelector(".lb-prev"), next=box.querySelector(".lb-next");
+    if(prev) prev.addEventListener("click",function(e){e.stopPropagation();show(idx-1);});
+    if(next) next.addEventListener("click",function(e){e.stopPropagation();show(idx+1);});
+    box.addEventListener("click",function(e){
+      if(e.target===box || (e.target.tagName==="BUTTON" && !e.target.classList.contains("lb-prev") && !e.target.classList.contains("lb-next"))){
+        box.classList.remove("open");pic.src="";
+      }
+    });
+    document.addEventListener("keydown",function(e){
+      if(!box.classList.contains("open"))return;
+      if(e.key==="Escape"){box.classList.remove("open");pic.src="";}
+      if(e.key==="ArrowLeft")show(idx-1);
+      if(e.key==="ArrowRight")show(idx+1);
+    });
+  }
+  document.querySelectorAll(".trip-card img").forEach(function(img){
+    img.addEventListener("error",function(){
+      var card=img.closest(".trip-card");
+      img.remove();
+      if(card) card.classList.add("no-photo");
+    });
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About | Jimbotours</title><link rel="stylesheet" href="assets/css/site.css"></head><body>
+<header class="site-header"><div class="header-inner"><div><a class="brand" href="index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div><nav><a href="index.html">Home</a><a href="trips.html">Trips</a><a href="map.html">Map</a><a href="timeline.html">Timeline</a><a href="about.html">About</a></nav></div></header>
+<main class="article"><div class="entry-date">ABOUT THE ARCHIVE</div><h1>About Jimbotours</h1><p>Jimbotours is a personal travel diary archive spanning 2007 to 2025. This new site preserves the diary entries and photographs originally published on GetJealous.</p><p>The rescued archive contains <b>113 diary entries</b> and <b>1421 photographs</b>, organised here by trip and date.</p><p>This version is self-contained: the photographs are stored inside the website folder, so the archive can be backed up or moved without relying on the original GetJealous website.</p></main>
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  document.querySelectorAll(".trip-card img").forEach(function(img){
+    img.addEventListener("error",function(){
+      var card=img.closest(".trip-card");
+      img.remove();
+      if(card) card.classList.add("no-photo");
+    });
+  });
+});
+</script>
+
+</body></html>

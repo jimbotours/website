@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Last night in Prague | Jimbotours</title>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<header class="site-header">
+<div class="header-inner">
+<div><a class="brand" href="../index.html" style="color:white">Jimbotours</a><div class="tagline">Travel diaries & photographs</div></div>
+<nav><a href="../index.html">Home</a><a href="../trips.html">Trips</a><a href="../map.html">Map</a><a href="../timeline.html">Timeline</a><a href="../about.html">About</a></nav>
+</div>
+</header>
+
+<main class="article">
+<div class="entry-date">2007-06-17</div>
+<h1>Last night in Prague</h1>
+<div class="article-meta">EAST MEETS EAST &nbsp;·&nbsp; 1 photographs</div>
+
+<div class="diary-body">
+After last nights bar crawl Shaun and John had a big blow - in fact we don`t think SG saw daylight.
+
+They both managed to perk up when the rumour of interesting and chilled bar crawl arose - due to unforessen circumstances (Stevie B having a wash) we arrived late and the crawl had commenced without us.
+
+So, down through the main strip trying to ignore the raucous scumbags on stag dos - rememebr we`re posh packing! - and on to the old town where the scum don`t seem to venture.  On passed copious amounts of stunning women - John might suggest a branch of Investec out there which he`d man for free! - and down the small bar/restaurant lined lanes when Shaunie G spots the smallest alley (1st time we`ve heard the phrase: Stevie B touched the sides. And last I`m sure) in the world with a restaurant at the bottom ovderlooking the river and Bang! we`re in and the night has started.
+
+A wicked meal later and everyone is beginning to relax into the evening watching the sunset, very romantic, being just us four boys I probably shouldn`t mention that but hey, when on tour...
+
+The beers finally start to flow nicely and we head out to the hostel near us where the random goth band played, no goths this time but the bar was busy and the company good.
+
+We were all enjoying our night taking no notice of the middle aged (30 ish) ginger guy with a mixed group at the table beside us until Stevie B`s attention was taken, some Czech girl start shoving her tits into his face (she was part of the mixed group and the guys with them seemed oblivous to it), we didn`t take too much notice as he`d probably plied her with drink all night and it was a hostel after all so these things happen but then he was off stroking her mates arm at the bar, now we`re thinking good man! or that he`s paying (again - Good man!). Half hour or so later the 1st girl gets up and without a word walks out of the bar with another of the men from the table (looked like husband and wife). Wierd bar - first goths then swingers (we end up recommending to the this to the shy Turkish guy staying in our next hostel)
+
+Other than that, we rate the new arrivals and comment on how they don`t have a touch on the czech girls, have a chat with the helpful waitress who we`d taken no notice of when she slagged the bar crawl (she was right!) and slagged the posh yanks at the end of the bar (fraternity boys on tour) and finally, met a girl from Reading who`d had too much beer but was very friendly and was pleased to meet friendly British faces.
+
+Night over we say our goodbyes, Jimbo charms the helpful waitress, we avoid eye contact with the ginger guy and off over to our hostel hoping Irene is not waiting up for us (another strange person - we have become accustomed to meeting these people on tour).  Stevie is snoring before he`s even stopped talking, we`re feeling grouchy at the prospect of another twelve hour train juorney and we`re not in the mood for that, numerous jabs later and he`s still at it - Shaunie G is not a happy man!
+</div>
+
+<h2>Photographs</h2><div class='gallery'><figure><a class='lb' href='../assets/photos/2007/2995206.jpg'><img loading='lazy' src='../assets/photos/2007/2995206.jpg' alt='Shaun makes the most of the train air conditioning'></a><figcaption>Shaun makes the most of the train air conditioning</figcaption></figure></div>
+
+<div class="pager"><div><a href='2007-06-16-bang-another-big-drink-343086.html'>&larr; BANG! Another BIG DRINK!</a></div><div><a href='2007-06-18-3-cities-we-just-done-it-344207.html'>3 cities...we just done it! &rarr;</a></div></div>
+</main>
+<div id="lightbox" class="lightbox"><button aria-label="Close">&times;</button><img alt=""><div class="lb-controls"><button class="lb-prev" aria-label="Previous photo">&#8249;</button><button class="lb-next" aria-label="Next photo">&#8250;</button></div><div class="lb-caption"></div></div>
+
+<footer>Jimbotours — rescued from GetJealous and rebuilt as a permanent archive.</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  var box=document.getElementById("lightbox");
+  if(box){
+    var pic=box.querySelector("img"), cap=box.querySelector(".lb-caption");
+    var links=Array.from(document.querySelectorAll("a.lb")), idx=0;
+    function show(n){
+      if(!links.length)return;
+      idx=(n+links.length)%links.length;
+      pic.src=links[idx].href;
+      var im=links[idx].querySelector("img");
+      cap.textContent=im ? (im.alt||"") : "";
+      box.classList.add("open");
+    }
+    links.forEach(function(a,i){a.addEventListener("click",function(e){e.preventDefault();show(i);});});
+    var prev=box.querySelector(".lb-prev"), next=box.querySelector(".lb-next");
+    if(prev) prev.addEventListener("click",function(e){e.stopPropagation();show(idx-1);});
+    if(next) next.addEventListener("click",function(e){e.stopPropagation();show(idx+1);});
+    box.addEventListener("click",function(e){
+      if(e.target===box || (e.target.tagName==="BUTTON" && !e.target.classList.contains("lb-prev") && !e.target.classList.contains("lb-next"))){
+        box.classList.remove("open");pic.src="";
+      }
+    });
+    document.addEventListener("keydown",function(e){
+      if(!box.classList.contains("open"))return;
+      if(e.key==="Escape"){box.classList.remove("open");pic.src="";}
+      if(e.key==="ArrowLeft")show(idx-1);
+      if(e.key==="ArrowRight")show(idx+1);
+    });
+  }
+  document.querySelectorAll(".trip-card img").forEach(function(img){
+    img.addEventListener("error",function(){
+      var card=img.closest(".trip-card");
+      img.remove();
+      if(card) card.classList.add("no-photo");
+    });
+  });
+});
+</script>
+
+</body>
+</html>
